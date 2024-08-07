@@ -66,7 +66,9 @@ pub async fn get_gpt_message(message: &str) -> Result<ApiResponse, String> {
 
     let body: GeminiRequest = GeminiRequest {
         contents: vec![Content {
-            parts: vec![Part { text: message.to_owned() }],
+            parts: vec![Part {
+                text: message.to_owned(),
+            }],
             role: None,
         }],
     };
